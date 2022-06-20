@@ -3,19 +3,19 @@ package main.java;
 import java.util.Date;
 
 public class DVD {
-    String title;
-    Date releaseDate;
-    double rating;
-    Director directorName;
-    Studio studio;
-    String note;
+    private String title;
+    private Date releaseDate;
+    private double rating;
+    private Director director;
+    private Studio studio;
+    private String note;
 
     public DVD(String title, Date releaseDate, double rating, Director directorName, Studio studio) {
-        this.title = title;
-        this.releaseDate = releaseDate;
-        this.rating = rating;
-        this.directorName = directorName;
-        this.studio = studio;
+        this.setTitle(title);
+        this.setReleaseDate(releaseDate);
+        this.setRating(rating);
+        this.setDirector(directorName);
+        this.setStudio(studio);
     }
 
     public String getTitle() {
@@ -30,8 +30,8 @@ public class DVD {
         return rating;
     }
 
-    public Director getDirectorName() {
-        return directorName;
+    public Director getDirector() {
+        return director;
     }
 
     public Studio getStudio() {
@@ -48,5 +48,21 @@ public class DVD {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
+    public void setDirector(Director director) {
+        this.director = director;
+    }
+
+    public void setStudio(Studio studio) {
+        this.studio = studio;
     }
 }
