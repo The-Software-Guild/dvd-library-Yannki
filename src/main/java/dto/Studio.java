@@ -1,4 +1,4 @@
-package main.java;
+package dto;
 
 public class Studio {
     private String name;
