@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DVDLibraryDaoImpl implements DVDLibraryDao{
+public class DVDLibraryDaoFileImpl implements DVDLibraryDao{
     public static final String ROSTER_FILE = "roster.txt";
     public static final String DELIMITER = "::";
     private Map<String, DVD> dvds = new HashMap<>();
