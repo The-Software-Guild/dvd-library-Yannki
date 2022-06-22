@@ -5,14 +5,12 @@ import java.util.Date;
 public class Director {
     private String firstName;
     private String lastName;
-    private Date DoB;
 
     public Director(){}
 
-    public Director(String firstName, String lastName, Date DoB) {
+    public Director(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.DoB = DoB;
     }
 
     public String getFirstName() {
@@ -23,10 +21,6 @@ public class Director {
         return lastName;
     }
 
-    public Date getDoB() {
-        return DoB;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -35,7 +29,8 @@ public class Director {
         this.lastName = lastName;
     }
 
-    public void setDoB(Date doB) {
-        DoB = doB;
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
     }
 }

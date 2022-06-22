@@ -4,7 +4,7 @@ package ui;
  * Edited TSG Official Implementation of the UserIO interface
  * @author ahill, yannki
  */
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class UserIOConsoleImpl implements UserIO {
@@ -169,8 +169,14 @@ public class UserIOConsoleImpl implements UserIO {
     }
 
     @Override
-    public Date readDate(String prompt) {
-        return null;
+    public LocalDate readDate(String prompt) {
+        while (true) {
+            try {
+                return LocalDate.parse(this.readString(prompt));
+            } catch (Exception e) {
+                this.print("Input error. Please try again.");
+            }
+        }
     }
 
 }

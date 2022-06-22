@@ -1,5 +1,3 @@
-package main.java;
-
 import controller.DVDLibraryController;
 import dao.DVDLibraryDao;
 import dao.DVDLibraryDaoFileImpl;
@@ -7,7 +5,7 @@ import ui.DVDLibraryView;
 import ui.UserIO;
 import ui.UserIOConsoleImpl;
 
-public class Library {
+public class AppLibrary {
     public static void main(String[] args) {
         UserIO myIo = new UserIOConsoleImpl();
         DVDLibraryView myView = new DVDLibraryView(myIo);

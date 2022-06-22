@@ -2,6 +2,7 @@ package dao;
 
 import dto.DVD;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,26 +14,23 @@ public class DVDLibraryDaoFileImpl implements DVDLibraryDao{
 
     @Override
     public DVD addDVD(String title, DVD dvd) {
-        return null;
+        DVD tempDVD = dvds.put(title,dvd);
+        return tempDVD;
     }
 
     @Override
-    public DVD removeDVD(DVD dvd) {
-        return null;
+    public DVD removeDVD(String title) {
+        DVD tempDVD = dvds.remove(title);
+        return tempDVD;
     }
 
     @Override
     public List<DVD> getAllDVDs() {
-        return null;
+        return new ArrayList(dvds.values());
     }
 
     @Override
-    public DVD getDVD(DVD dvd) {
-        return null;
-    }
-
-    @Override
-    public DVD getDVDbyTitle(String title) {
-        return null;
+    public DVD getDVD(String title) {
+        return dvds.get(title);
     }
 }

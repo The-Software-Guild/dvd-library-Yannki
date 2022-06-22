@@ -1,10 +1,14 @@
 package dto;
 
 public class Studio {
-    private String name;
-    private String location;
+    private String name = "NA";
+    private String location = "NA";
 
     public Studio(){}
+
+    public Studio(String name) {
+        this.name = name;
+    }
 
     public Studio(String name, String location) {
         this.name = name;
@@ -25,5 +29,10 @@ public class Studio {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -1,6 +1,6 @@
 package ui;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public interface UserIO {
     void print(String msg);
@@ -9,7 +9,7 @@ public interface UserIO {
 
     double readDouble(String prompt, double min, double max);
 
-    Date readDate(String prompt);
+    LocalDate readDate(String prompt);
 
     float readFloat(String prompt);
 

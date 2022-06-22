@@ -1,28 +1,29 @@
 package dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class DVD {
     private String title;
-    private Date releaseDate;
+    private LocalDate releaseDate;
     private double rating;
     private Director director;
     private Studio studio;
     private String note;
 
-    public DVD(String title, Date releaseDate, double rating, Director directorName, Studio studio) {
-        this.setTitle(title);
-        this.setReleaseDate(releaseDate);
-        this.setRating(rating);
-        this.setDirector(directorName);
-        this.setStudio(studio);
+    public DVD(String title, LocalDate releaseDate, double rating, Director director, Studio studio, String note) {
+        this.title = title;
+        this.releaseDate =releaseDate;
+        this.rating = rating;
+        this.director = director;
+        this.studio = studio;
+        this.note = note;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public Date getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
@@ -54,12 +55,13 @@ public class DVD {
         this.title = title;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 
-    public void setDirector(Director director) {
-        this.director = director;
+    public void setDirector(String firstName, String lastName) {
+        this.director.setFirstName(firstName);
+        this.director.setLastName(lastName);
     }
 
     public void setStudio(Studio studio) {
