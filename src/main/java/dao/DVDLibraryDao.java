@@ -10,7 +10,7 @@ public interface DVDLibraryDao {
 
     DVD removeDVD(String title);
 
-    //DVD editDVD(String DVD);
+    DVD editDVD(String title, DVD dvd);
 
     List<DVD> getAllDVDs();
 
